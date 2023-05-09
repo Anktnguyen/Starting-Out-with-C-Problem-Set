@@ -14,11 +14,33 @@ program should display a message indicating the number is invalid.
 """
 
 def main():
-    account_list = []
-    read_list = open('charge_account.txt', 'r')
-    for line in read_list:
-        line = 0
+    read_list = open('charge_accounts.txt', 'r')
+    account_list = read_list.readlines()
+    read_list.close()
 
+    #Converting the data in file into a list
+    try:
+        for line in range(len(account_list)):
+            account_list[line] = int(account_list[line].strip("\n"))
+        print("\nAccount list have been created.\n\n")
+    except IOError:
+        print("File error, not found in current directory or does not exist.")
+
+    #this line is to check for account list if needed
+    #print(account_list)
+    
+    #Interactive portion for user to search for account number in the list
+    run = input("Search for account number? yes or no (y or n): ")
+
+    while run == "y" or run == "yes":
+        try:
+            #Taking input value and search for the number in the list
+            num = int(input("Enter an account number (7-digit integer): "))
+            account_list.index(num)
+            print(f"{num} exist in the list")
+        except ValueError:
+            print("Value error, that item does not exist.")
+        run = input("Search again? yes or no (y or n): ")
 
 
 
