@@ -10,9 +10,9 @@ def main():
     rainfall_tmonth = []
     total = 0
     count = 0
-    #while loop to record all 12 months 
-    while count < 12:
-        monthly_rain = int(input("Enter amount of rainfall for: "))
+    #for loop to record all 12 months 
+    for count in range(12):
+        monthly_rain = int(input(f"Enter amount of rainfall for month {count + 1}: "))
         #appending the amount for each month
         rainfall_tmonth.append(monthly_rain)
         total += monthly_rain
@@ -23,7 +23,7 @@ def main():
     print(f'{rainfall_tmonth}')
     print(f"The highest rainfall amount is {max(rainfall_tmonth)}")
     print(f"The lowest rainfall amount is {min(rainfall_tmonth)}")
-    print(f"The average rainfall for 12 months is {average}")
+    print(f"The average rainfall for 12 months is {average:.2f}")
 
     
 
