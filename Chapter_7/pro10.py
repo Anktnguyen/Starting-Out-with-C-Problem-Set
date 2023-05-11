@@ -27,7 +27,6 @@ def main():
         print(f"The team {search} has won {winner_list.count(search)} times during the World series from 1903 to 2009.")
 
 
-    
 
 if __name__ == "__main__":
     main()
