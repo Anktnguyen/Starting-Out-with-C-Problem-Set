@@ -18,26 +18,30 @@ messages indicating whether the names were among the most popular.
 #wherever they are applicable to understand the logical error 
 def main():
 
-    start_search = str(input("Searching for popular boy or girl name or both (yes or no, y or n): "))
+    start_search = str(input("Searching for popular boy or girl name or both (yes or no, y or n) or press any string key to exit: "))
     #while loop menu to make the program slightly more interactive
     while start_search == 'y' or start_search == 'yes':
         boy_or_girl_or_both = str(input("Look up only boy name or girl name or both (type boy or girl or both) in all lower case: "))
-        try: 
-            if boy_or_girl_or_both == "girl":
-                name = str(input("Enter a girl name: "))
-                girl_name(name)
-            elif boy_or_girl_or_both == "boy":
-                name = str(input("Enter a boy name: "))
-                boy_name(name)
-            elif boy_or_girl_or_both == "both":
-                gname = str(input("Enter a girl name: "))
-                bname = str(input("Enter a boy name: "))
-                girl_name(gname)
-                boy_name(bname)
-        except ValueError:
-            print("Value error, type the option in all lower case.")
+        while boy_or_girl_or_both == 'girl' or boy_or_girl_or_both == 'boy' or boy_or_girl_or_both == 'both':
+            try: 
+                if boy_or_girl_or_both == "girl":
+                    name = str(input("Enter a girl name: "))
+                    girl_name(name)
+                elif boy_or_girl_or_both == "boy":
+                    name = str(input("Enter a boy name: "))
+                    boy_name(name)
+                elif boy_or_girl_or_both == "both":
+                    gname = str(input("Enter a girl name: "))
+                    bname = str(input("Enter a boy name: "))
+                    girl_name(gname)
+                    boy_name(bname)
+            except ValueError:
+                print("Value error, type the option in all lower case.")
+                boy_or_girl_or_both = str(input("Look up only boy name or girl name or both (type boy or girl or both) in all lower case: "))
+        else:
+            print("Cannot compute command...Restarting...")
         start_search = str(input("Search for names again? yes or no (y or n): "))
-
+    
 
 #function to open up Girl Names file and add them into the list
 def girl_name(name):

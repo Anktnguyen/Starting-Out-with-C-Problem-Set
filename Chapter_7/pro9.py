@@ -34,6 +34,5 @@ def main():
     print(f"Year {min_year} has the lowest population of {min(population_list)}")
 
 
-
 if __name__ == "__main__":
     main()
