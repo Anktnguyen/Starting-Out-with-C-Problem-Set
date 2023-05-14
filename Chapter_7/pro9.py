@@ -17,7 +17,6 @@ def main():
     count = 0
     total = 0
     population_list = read_file.readlines()
-    #The range and len function works for exclusively for string 
     #The for loop iterate through the list of string adding them into the list
     for line in range(len(population_list)):
         population_list[line] = int(population_list[line].strip("\n"))
