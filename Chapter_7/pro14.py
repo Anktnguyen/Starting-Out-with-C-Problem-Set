@@ -13,7 +13,8 @@ chart showing how you spend your money.
 import matplotlib.pyplot as plt
 
 def main():
-    write_file = open("pie_chart_expenses.txt", "a")
+    #using w+ to overwrite previous data, using a (append) will add to file and make x-label out of range
+    write_file = open("pie_chart_expenses.txt", "w+")
     #I created this list to guide the user through the categories
     item_labels = ["Rent", "Gas", "Food", "Clothing", "Car payment", "Misc"]
 
@@ -34,7 +35,7 @@ def main():
 
     #reading the file into list
     for line in range(len(expenses)):
-        expenses[line] = expenses[line].strip("/n")
+        expenses[line] = expenses[line].strip("\n")
 
     #pie chart labels
     plt.pie(expenses, labels=item_labels)
