@@ -10,7 +10,7 @@ the following data:
 
 def main():
 
-    #create a while loop and another fuction
+    #create a while loop
     create_file = open("words.txt", "w+")
 
     while True:
@@ -53,7 +53,7 @@ def main():
             
     print(f"{count} word(s) in the file.")
     print(f"{total/count} average length of all of the word(s).")
-    print(f"The longest word has {temp_max} character and the word is {longest_word}")
+    print(f"The longest word has {temp_max} character(s) and the word is {longest_word}")
             
 
 
