@@ -15,12 +15,10 @@ def even_odd():
         #even number will result in no left over when modulo by 2
         if number % 2 == 0:
             #the number is converted to 1 for counting purposes
-            number = 1
-            total_even += number
+            total_even += 1
         #if the number modulo by 2 with left over then it's an odd number
         else:
-            number = 1
-            total_odd += number
+            total_odd += 1
     print(total_even)
     print(total_odd)
 
