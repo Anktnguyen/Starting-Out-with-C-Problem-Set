@@ -14,7 +14,7 @@ def even_odd():
         number = random.randint(1, 100)
         #even number will result in no left over when modulo by 2
         if number % 2 == 0:
-            #the number is converted to 1 for counting purposes
+            #count even number
             total_even += 1
         #if the number modulo by 2 with left over then it's an odd number
         else:
