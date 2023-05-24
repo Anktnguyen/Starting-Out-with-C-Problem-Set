@@ -14,29 +14,30 @@ the program should display the number of guesses.
 
 import random
 count_guess = 1
-again = "y"
 
 def main():
-    while again == "y":
+    again = input("\n\nPress y to play: ")
+    while again.lower() == "y":
         guess_num = int (input ("Enter the predicted random number: "))
         guess(guess_num)
-        game = str(input("\n\nPress y to play again: "))
+        again = input("\n\nPress y to play again: ")
     else:
         print("Terminating program...")
 
 def guess(guess_num):
     global count_guess
     number = random_num()
-    print(number)
+    #print(number)
     while guess_num != number:
-        guess_num = int(input("Enter the predicted random number: "))
         count_guess +=1
-        if number < guess_num:
-            print("Too High, try again.")
-        else:
-            print("Too Low, try again.")
+        if guess_num > number:
+            print("\nToo High, try again.")
+            guess_num = int(input("Enter the predicted random number: "))
+        elif guess_num < number:
+            print("\nToo Low, try again.")
+            guess_num = int(input("Enter the predicted random number: "))
     else:
-        print("Congratulation you guessed the number!\n"
+        print(f"Congratulation you guessed the number {number}!\n"
               f"It took {count_guess} guesses to reach the right answer.")
 
 
