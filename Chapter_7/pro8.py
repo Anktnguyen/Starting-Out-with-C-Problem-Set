@@ -59,7 +59,7 @@ def girl_name(name):
     except IOError:
         print("File cannot be open. File does not exist or not found in the directory.")
 
-#function to open up Boy Names gile and add them into the list
+#function to open up Boy Names file and add them into the list
 def boy_name(name):
     open_boy_name = open("BoyNames.txt", "r")
     boy_name_list = open_boy_name.readlines()
