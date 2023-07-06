@@ -34,7 +34,7 @@ an error message if the user enters an invalid moon name.
 """
 def main():
     #user input of moon name
-    moon_name = input("Enter moon a Galilean moon of Jupiter's name: ")
+    moon_name = input("Enter a Galilean moon of Jupiter's name: ")
     #printing out information and calling function
     print(f"The radius of {moon_name}:")
     #dictionary_name[key], retrieving value in the dictionary using the key
