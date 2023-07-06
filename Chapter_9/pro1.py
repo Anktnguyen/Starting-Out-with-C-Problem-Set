@@ -38,11 +38,11 @@ def main():
     #printing out information and calling function
     print(f"The radius of {moon_name}:")
     #dictionary_name[key], retrieving value in the dictionary using the key
-    radius[moon_name]
+    radius(moon_name)
     print(f"The surface gravity of {moon_name}:")
-    sur_gravity[moon_name]
+    sur_gravity(moon_name)
     print(f"The orbital period of {moon_name}:")
-    orbit_per[moon_name]
+    orbit_per(moon_name)
 
 
 #Separating the characteristics of moon into each function for efficient future update
