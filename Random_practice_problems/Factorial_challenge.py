@@ -16,7 +16,7 @@ def main():
 def factorial(num):
     #calling the global variable
     global result
-    #if the number is less than 0 (negative integer), it print None
+    #if the number is less than 0 (negative integer), it will prints None
     if num >= 0:
         #if number is 0 which is 0!  then it will equal 1 because math
         if num == 0:
